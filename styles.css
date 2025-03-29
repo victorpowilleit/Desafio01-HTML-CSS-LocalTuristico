@@ -1,0 +1,134 @@
+:root{
+    --background: #F5F4F0;
+    --border: #D9D9D9;
+    --text-primary: #1B1B1B;
+    --text-secondary: #333333;
+    --text-tertiary: #696969;
+    --text-headline: #E1624F;
+    --accent-blue: #0C51A7;
+    --accent-orange: #E95E10;
+    --accent-pink: #E5245E;
+    --accent-purple: #591B98;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid #F008*/
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.center{
+    text-align: center;
+}
+
+h1{
+    font-size: 36px;
+}
+
+h2{
+    font-size: 32px;
+}
+
+h3, ol>li{
+    font-size: 28px;
+}
+
+h1, h2, h3, ol>li{
+    color: var(--text-primary);
+}
+
+.headline, .subtitle, p{
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+h1, h2, h3, ol>li, .headline{
+    font-weight: bold;
+}
+
+li{
+    list-style-type: disc;
+    font-size: 16px;
+    &.styleA{
+        color: var(--accent-blue);
+    }
+    &.styleB{
+        color: var(--accent-purple);
+    }
+    &.styleC{
+        color: var(--accent-pink);
+    }
+    &.styleD{
+        color: var(--accent-orange);
+    }
+}
+
+.subtitle{
+    font-style: italic;
+    text-align: center;
+}
+
+.headline{
+    color: var(--text-headline);
+}
+
+p{
+    font-weight: normal;
+    color: var(--text-secondary);
+}
+
+ol, ul{
+    list-style-position: inside;
+}
+
+.description{
+    margin-top: 28px;
+}
+
+.container{
+    margin: 0 auto;
+    width: 100dvw;
+    max-width: 1120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 80px;
+}
+
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+    img{
+        width: 100%;
+        border-radius: 28px;
+        object-fit: cover;
+        &.primary{
+            height: 660px
+        }
+        &.secondary{
+            height: 350px
+        }
+    }
+    &:not(:first-child){
+        border-top: 1px solid var(--border);
+    }
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Alice", serif;
+}
